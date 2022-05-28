@@ -69,6 +69,7 @@ function Posts() {
       <h1>{ value }</h1>
       <input onChange={(e) => setValue(e.target.value)} />
       <Counter />
+      <Counter />
       <ClassCounter />
       <hr style={{margin: "15px 0px"}} />
       
