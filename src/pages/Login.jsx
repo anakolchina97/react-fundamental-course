@@ -1,15 +1,15 @@
-import React, { useContext, useState } from 'react';
-import MyButton from '../components/ui/button/MyButton';
-import MyInput from '../components/ui/input/MyInput';
-import { AuthContext } from '../context';
+import React, { useContext } from "react";
+import MyButton from "../components/ui/button/MyButton";
+import MyInput from "../components/ui/input/MyInput";
+import { AuthContext } from "../context";
 
 const Login = () => {
-  const {isAuth, setIsAuth} = useContext(AuthContext);
+  const { setIsAuth } = useContext(AuthContext);
 
   const login = (e) => {
     e.preventDefault();
     setIsAuth(true);
-    localStorage.setItem('auth', 'true');
+    localStorage.setItem("auth", "true");
   };
 
   return (
@@ -18,9 +18,7 @@ const Login = () => {
       <form onSubmit={login}>
         <MyInput type="text" placeholder="Введите логин" />
         <MyInput type="password" placeholder="Введите пароль" />
-        <MyButton>
-          Войти
-        </MyButton>
+        <MyButton>Войти</MyButton>
       </form>
     </div>
   );
